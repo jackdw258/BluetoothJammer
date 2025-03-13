@@ -10,6 +10,8 @@ workflows:
       - name: Set up Java
         script: |
           export JAVA_HOME=$JAVA_HOME_17_X64
+      - name: Give Gradlew Execute Permissions
+        script: chmod +x ./gradlew
       - name: Build APK
         script: ./gradlew assembleDebug
     artifacts:
